@@ -3,57 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoonMeow - To the MOON, Meow!</title>
+    <title>MoonMeow - Cosmic Crypto Revolution</title>
     <style>
-        body {
-            background-color: #1a0d2b;
-            color: #00ffcc;
-            font-family: 'Comic Sans MS', cursive;
-            text-align: center;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0a0a1a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            background-color: #1a1a2e;
             padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 255, 204, 0.2);
         }
-        h1 {
-            font-size: 48px;
-            color: #ff00ff;
-            text-shadow: 0 0 10px #00ffcc;
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto 20px;
         }
-        p {
-            font-size: 20px;
-            line-height: 1.5;
+        nav {
+            margin: 20px 0;
         }
-        .catnip {
-            color: #ffff00;
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            margin: 0 20px;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
-        .button {
-            background-color: #ff00ff;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
+        nav a:hover {
+            color: #ff00ff;
+        }
+        .hero {
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0a0a1a, #1a1a2e);
+        }
+        .hero h1 {
+            font-size: 48px;
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #b3b3cc;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .features {
+            padding: 50px 20px;
+            background-color: #0a0a1a;
+        }
+        .features h2 {
+            font-size: 32px;
+            color: #ff00ff;
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background-color: #1a1a2e;
+            padding: 20px;
             border-radius: 10px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 0 15px #ff00ff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
         }
-        .button:hover {
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .cta-button {
             background-color: #00ffcc;
-            color: #1a0d2b;
+            color: #0a0a1a;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #ff00ff;
+            color: #ffffff;
+            transform: scale(1.05);
         }
         footer {
-            margin-top: 50px;
+            padding: 20px;
+            background-color: #1a1a2e;
+            color: #b3b3cc;
             font-size: 14px;
-            color: #ff66ff;
+            margin-top: 50px;
+        }
+        /* New Features Styling */
+        .token-stats, .roadmap, .community, .news, .wallet, .leaderboard, .faq, .contact, .social, .treasure, .fun-zone {
+            display: none;
+            padding: 20px;
+            background-color: #0a0a1a;
+        }
+        .active {
+            display: block;
+        }
+        /* Funny Feature Styling */
+        .meow-button {
+            background-color: #ff00ff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .meow-button:hover {
+            background-color: #00ffcc;
+            color: #0a0a1a;
         }
     </style>
 </head>
 <body>
-    <h1>MOONMEOW: PURR-FECTLY COSMIC $MEOW</h1>
-    <p>Welcome to the wildest meme coin in the galaxy! Meet <span class="catnip">Captain Whiskers</span>, the neon-lit space cat who’s lost his cosmic catnip stash ($MEOW). Help him rebuild his spaceship by buying tokens, finding QR codes, and laughing at bad cat puns!</p>
-    <p>Why invest? Because this coin’s so purr-posterous, it’s gonna <span class="catnip">claw its way to the MOON</span>—or at least crash-land somewhere hilarious.</p>
-    <p><strong>Tokenomics:</strong> 1B $MEOW supply. Burns every 10% pump. 2% tax: 1% to holders, 1% to cosmic dust. Meow-velous, right?</p>
-    <button class="button" onclick="alert('Meow meow! You just adopted 100 $MEOW... in spirit!')">Join the Meow Mission!</button>
-    <p>Follow us on X for clues to the <span class="catnip">Lunar Litter Box</span> treasure hunt—find a QR code, win a Golden Whisker NFT!</p>
-    <footer>© 2025 MoonMeow Inc. - No cats were harmed, but many were confused.</footer>
+    <header>
+        <img src="meow.jpg" alt="MoonMeow Logo" class="logo">
+        <h1>MoonMeow ($MEOW)</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#token">Tokenomics</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#community">Community</a>
+            <a href="#news">News</a>
+            <a href="#wallet">Wallet</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="#treasure">Treasure Hunt</a>
+            <a href="#social">Social</a>
+            <a href="#fun">Fun Zone</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to MoonMeow - The Cosmic Meme Coin</h1>
+        <p>Embark on a galactic journey with Captain Whiskers, our neon-lit feline astronaut, as he launches $MEOW to the moon! Join the revolution, invest in the purr-fect crypto, and unlock exclusive rewards through our innovative features.</p>
+        <button class="cta-button" onclick="showSection('token-stats')">Get Started with $MEOW</button>
+        <button class="meow-button" onclick="playMeow()">Meow Meow!</button>
+    </section>
+
+    <section class="features">
+        <h2>Why MoonMeow?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">Scalable Blockchain Technology</div>
+            <div class="feature-card">Vibrant Community Engagement</div>
+            <div class="feature-card">Unique Token Burn Mechanism</div>
+        </div>
+    </section>
+
+    <!-- 10 New Features/Functionalities (Hidden Sections, Toggle with JavaScript) + Fun Zone -->
+    <section id="token-stats" class="token-stats">
+        <h2>Token Statistics</h2>
+        <p>Current Supply: 1B $MEOW | Market Cap: $X | 2% Transaction Tax (1% Redistribution, 1% Burn)</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for Stats!</button>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+        <h2>Roadmap</h2>
+        <p>Q1 2025: Launch on pump.fun | Q2 2025: NFT Airdrops | Q3 2025: Lunar Litter Box Expansion</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for the Future!</button>
+    </section>
+
+    <section id="community" class="community">
+        <h2>Community</h2>
+        <p>Join our X, Discord, and Telegram for updates and memes. Follow @MoonMeowOfficial for the latest!</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow with the Community!</button>
+    </section>
+
+    <section id="news" class="news">
+        <h2>Latest News</h2>
+        <p>Feb 2025: MoonMeow hits 100K holders! Stay tuned for our treasure hunt launch.</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for News!</button>
+    </section>
+
+    <section id="wallet" class="wallet">
+        <h2>Connect Your Wallet</h2>
+        <p>Use MetaMask or Trust Wallet to buy $MEOW on pump.fun. Click below to connect:</p>
+        <button class="cta-button" onclick="alert('Wallet connection simulated - redirecting to pump.fun')">Connect Wallet</button>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for Crypto!</button>
+    </section>
+
+    <section id="leaderboard" class="leaderboard">
+        <h2>Holder Leaderboard</h2>
+        <p>Top 10 $MEOW Holders: 1. CosmicCat - 1M $MEOW | 2. MoonPurr - 900K $MEOW...</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for the Leaderboard!</button>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>FAQ</h2>
+        <p>Q: What is $MEOW? A: A meme coin with a cosmic cat twist! Q: How to buy? A: Use pump.fun!</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for Answers!</button>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@moonmeow.crypto | X: @MoonMeowOfficial</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for Support!</button>
+    </section>
+
+    <section id="treasure" class="treasure">
+        <h2>Lunar Litter Box Treasure Hunt</h2>
+        <p>Find QR codes in major cities or online for bonus $MEOW and Golden Whisker NFTs. Check X for clues!</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for Treasure!</button>
+    </section>
+
+    <section id="social" class="social">
+        <h2>Social Media</h2>
+        <p>Follow us on X, Instagram, and TikTok for memes and updates: @MoonMeowOfficial</p>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <button class="meow-button" onclick="playMeow()">Meow for Memes!</button>
+    </section>
+
+    <section id="fun" class="fun-zone">
+        <h2>Fun Zone</h2>
+        <p>Enjoy some cosmic cat chaos! Click below for silly surprises:</p>
+        <button class="meow-button" onclick="playMeow()">Meow Loudly!</button>
+        <button class="meow-button" onclick="catDance()">Watch Captain Whiskers Dance!</button>
+        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+    </section>
+
+    <footer>
+        <p>© 2025 MoonMeow Inc. | All Rights Reserved | Powered by the Cosmic Feline Force</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function playMeow() {
+            const meowSound = new Audio('https://www.myinstants.com/media/sounds/meow-1.mp3');
+            meowSound.play().catch(error => console.log('Meow failed to play:', error));
+            alert('Captain Whiskers says: MEOW! Purr-fectly cosmic!');
+        }
+
+        function catDance() {
+            alert('Captain Whiskers is doing the moonwalk! *neon lights flash*');
+            // You could expand this with an animation or GIF later, but for now, it’s a funny alert.
+        }
+    </script>
 </body>
-                                                                                                                                                                                                                                                                               </html>
+</html>
