@@ -82,39 +82,22 @@
         .feature-card:hover {
             transform: translateY(-5px);
         }
-        .cta-button {
+        a.cta-button {
+            display: inline-block;
             background-color: #00ffcc;
             color: #0a0a1a;
             padding: 15px 40px;
-            border: none;
             border-radius: 5px;
             font-size: 18px;
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .cta-button:hover {
+        a.cta-button:hover {
             background-color: #ff00ff;
             color: #ffffff;
             transform: scale(1.05);
         }
-        footer {
-            padding: 20px;
-            background-color: #1a1a2e;
-            color: #b3b3cc;
-            font-size: 14px;
-            margin-top: 50px;
-        }
-        /* New Features Styling */
-        .token-stats, .roadmap, .community, .news, .wallet, .leaderboard, .faq, .contact, .social, .treasure, .fun-zone {
-            display: none;
-            padding: 20px;
-            background-color: #0a0a1a;
-        }
-        .active {
-            display: block;
-        }
-        /* Funny Feature Styling */
         .meow-button {
             background-color: #ff00ff;
             color: #ffffff;
@@ -129,6 +112,17 @@
             background-color: #00ffcc;
             color: #0a0a1a;
         }
+        footer {
+            padding: 20px;
+            background-color: #1a1a2e;
+            color: #b3b3cc;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+        .token-stats, .roadmap, .community, .news, .wallet, .faq, .contact, .social, .treasure, .fun-zone {
+            padding: 20px;
+            background-color: #0a0a1a;
+        }
     </style>
 </head>
 <body>
@@ -138,12 +132,11 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#features">Features</a>
-            <a href="#token">Tokenomics</a>
+            <a href="#token-stats">Tokenomics</a>
             <a href="#roadmap">Roadmap</a>
             <a href="#community">Community</a>
             <a href="#news">News</a>
             <a href="#wallet">Wallet</a>
-            <a href="#leaderboard">Leaderboard</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
             <a href="#treasure">Treasure Hunt</a>
@@ -152,14 +145,14 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <h1>Welcome to MoonMeow - The Cosmic Meme Coin</h1>
-        <p>Embark on a galactic journey with Captain Whiskers, our neon-lit feline astronaut, as he launches $MEOW to the moon! Join the revolution, invest in the purr-fect crypto, and unlock exclusive rewards through our innovative features.</p>
-        <button class="cta-button" onclick="showSection('token-stats')">Get Started with $MEOW</button>
+        <p>Embark on a galactic journey with Captain Whiskers, our neon-lit feline astronaut, as he prepares to launch $MEOW to the moon! Join the revolution and stay tuned for a purr-fect crypto experience.</p>
+        <a href="#token-stats" class="cta-button">Get Started with $MEOW</a>
         <button class="meow-button" onclick="playMeow()">Meow Meow!</button>
     </section>
 
-    <section class="features">
+    <section id="features" class="features">
         <h2>Why MoonMeow?</h2>
         <div class="feature-grid">
             <div class="feature-card">Scalable Blockchain Technology</div>
@@ -168,107 +161,87 @@
         </div>
     </section>
 
-    <!-- 10 New Features/Functionalities (Hidden Sections, Toggle with JavaScript) + Fun Zone -->
     <section id="token-stats" class="token-stats">
-        <h2>Token Statistics</h2>
-        <p>Current Supply: 1B $MEOW | Market Cap: $X | 2% Transaction Tax (1% Redistribution, 1% Burn)</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for Stats!</button>
+        <h2>Tokenomics</h2>
+        <p>Total Supply: 1,000,000,000 $MEOW | Circulating Supply: 500,000,000 $MEOW | Transaction Tax: 2% (1% Redistribution, 1% Burn)</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="roadmap" class="roadmap">
         <h2>Roadmap</h2>
-        <p>Q1 2025: Launch on pump.fun | Q2 2025: NFT Airdrops | Q3 2025: Lunar Litter Box Expansion</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for the Future!</button>
+        <p>
+            <strong>Q1 2025:</strong> Official launch on pump.fun, initial marketing campaign.<br>
+            <strong>Q2 2025:</strong> Introduction of NFT airdrops for top holders.<br>
+            <strong>Q3 2025:</strong> Expansion of the Lunar Litter Box treasure hunt.<br>
+            <strong>Q4 2025:</strong> Partnerships with DeFi platforms.
+        </p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="community" class="community">
         <h2>Community</h2>
-        <p>Join our X, Discord, and Telegram for updates and memes. Follow @MoonMeowOfficial for the latest!</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow with the Community!</button>
+        <p>Join our X, Discord, and Telegram for updates. Follow @MoonMeow for the latest!</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="news" class="news">
         <h2>Latest News</h2>
-        <p>Feb 2025: MoonMeow hits 100K holders! Stay tuned for our treasure hunt launch.</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for News!</button>
+        <p>Stay tuned for our official launch announcement!</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="wallet" class="wallet">
         <h2>Connect Your Wallet</h2>
-        <p>Use MetaMask or Trust Wallet to buy $MEOW on pump.fun. Click below to connect:</p>
-        <button class="cta-button" onclick="alert('Wallet connection simulated - redirecting to pump.fun')">Connect Wallet</button>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for Crypto!</button>
-    </section>
-
-    <section id="leaderboard" class="leaderboard">
-        <h2>Holder Leaderboard</h2>
-        <p>Top 10 $MEOW Holders: 1. CosmicCat - 1M $MEOW | 2. MoonPurr - 900K $MEOW...</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for the Leaderboard!</button>
+        <p>To buy $MEOW, visit <a href="https://pump.fun" target="_blank">pump.fun</a> after launch.</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="faq" class="faq">
         <h2>FAQ</h2>
-        <p>Q: What is $MEOW? A: A meme coin with a cosmic cat twist! Q: How to buy? A: Use pump.fun!</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for Answers!</button>
+        <p><strong>Q: What is $MEOW?</strong> A: A meme coin with a cosmic cat theme!<br><strong>Q: How to buy?</strong> A: Visit pump.fun post-launch!</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Email: contact@moonmeow.crypto | X: @MoonMeowOfficial</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for Support!</button>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="treasure" class="treasure">
         <h2>Lunar Litter Box Treasure Hunt</h2>
-        <p>Find QR codes in major cities or online for bonus $MEOW and Golden Whisker NFTs. Check X for clues!</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for Treasure!</button>
+        <p>Find QR codes post-launch for bonus $MEOW and NFTs. Check X for clues!</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="social" class="social">
         <h2>Social Media</h2>
-        <p>Follow us on X, Instagram, and TikTok for memes and updates: @MoonMeowOfficial</p>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
-        <button class="meow-button" onclick="playMeow()">Meow for Memes!</button>
+        <p>Follow us on X: @MoonMeowOfficial</p>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <section id="fun" class="fun-zone">
         <h2>Fun Zone</h2>
-        <p>Enjoy some cosmic cat chaos! Click below for silly surprises:</p>
+        <p>Enjoy a sneak peek of cosmic cat chaos!</p>
         <button class="meow-button" onclick="playMeow()">Meow Loudly!</button>
         <button class="meow-button" onclick="catDance()">Watch Captain Whiskers Dance!</button>
-        <button class="cta-button" onclick="showSection('home')">Back to Home</button>
+        <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
     <footer>
-        <p>© 2025 MoonMeow Inc. | All Rights Reserved | Powered by the Cosmic Feline Force</p>
+        <p>© 2025 MoonMeow Inc. | All Rights Reserved | Pre-Launch Preview</p>
     </footer>
 
     <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-        }
-
         function playMeow() {
             const meowSound = new Audio('https://www.myinstants.com/media/sounds/meow-1.mp3');
             meowSound.play().catch(error => console.log('Meow failed to play:', error));
-            alert('Captain Whiskers says: MEOW! Purr-fectly cosmic!');
+            alert('Captain Whiskers says: MEOW!');
         }
 
         function catDance() {
-            alert('Captain Whiskers is doing the moonwalk! *neon lights flash*');
-            // You could expand this with an animation or GIF later, but for now, it’s a funny alert.
+            alert('Captain Whiskers is doing the moonwalk!');
         }
     </script>
 </body>
-</html>
+                                   </html>
