@@ -11,117 +11,144 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #0a0a1a;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #1a1a2e;
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             text-align: center;
         }
         header {
             background-color: #1a1a2e;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 255, 204, 0.2);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            max-width: 200px;
+            max-width: 150px;
             height: auto;
-            margin: 0 auto 20px;
+            margin: 0 auto 1rem;
         }
         nav {
-            margin: 20px 0;
+            margin: 1rem 0;
         }
         nav a {
             color: #00ffcc;
             text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
+            margin: 0 1rem;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #ff00ff;
+            color: #ffffff;
         }
-        .hero {
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #0a0a1a, #1a1a2e);
-        }
-        .hero h1 {
-            font-size: 48px;
-            color: #00ffcc;
-            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #b3b3cc;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        .features {
-            padding: 50px 20px;
-            background-color: #0a0a1a;
-        }
-        .features h2 {
-            font-size: 32px;
-            color: #ff00ff;
-            margin-bottom: 30px;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        .section {
+            padding: 2rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
+        .hero {
+            background-color: #f5f5f5;
+            color: #1a1a2e;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #4a4a6a;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        .features {
+            background-color: #ffffff;
+        }
+        .features h2 {
+            font-size: 2rem;
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
         .feature-card {
-            background-color: #1a1a2e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
         .feature-card:hover {
             transform: translateY(-5px);
         }
-        a.cta-button {
+        .cta-button {
             display: inline-block;
             background-color: #00ffcc;
-            color: #0a0a1a;
-            padding: 15px 40px;
+            color: #1a1a2e;
+            padding: 0.75rem 1.5rem;
             border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 1rem;
+            font-weight: 500;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        a.cta-button:hover {
-            background-color: #ff00ff;
+        .cta-button:hover {
+            background-color: #1a1a2e;
             color: #ffffff;
             transform: scale(1.05);
         }
-        .meow-button {
-            background-color: #ff00ff;
+        footer {
+            padding: 1rem;
+            background-color: #1a1a2e;
             color: #ffffff;
-            padding: 10px 20px;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        /* Meow Button (Minimal, Optional Fun) */
+        .meow-button {
+            background-color: #1a1a2e;
+            color: #00ffcc;
+            padding: 0.5rem 1rem;
             border: none;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 0.9rem;
             cursor: pointer;
-            margin: 10px;
+            margin: 0.5rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .meow-button:hover {
             background-color: #00ffcc;
-            color: #0a0a1a;
+            color: #1a1a2e;
         }
-        footer {
-            padding: 20px;
-            background-color: #1a1a2e;
-            color: #b3b3cc;
-            font-size: 14px;
-            margin-top: 50px;
-        }
-        .token-stats, .roadmap, .community, .news, .wallet, .faq, .contact, .social, .treasure, .fun-zone {
-            padding: 20px;
-            background-color: #0a0a1a;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 120px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .features h2 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -145,86 +172,85 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Welcome to MoonMeow - The Cosmic Meme Coin</h1>
-        <p>Embark on a galactic journey with Captain Whiskers, our neon-lit feline astronaut, as he prepares to launch $MEOW to the moon! Join the revolution and stay tuned for a purr-fect crypto experience.</p>
-        <a href="#token-stats" class="cta-button">Get Started with $MEOW</a>
-        <button class="meow-button" onclick="playMeow()">Meow Meow!</button>
+    <section id="home" class="section hero">
+        <h1>Welcome to MoonMeow</h1>
+        <p>Discover MoonMeow, a cutting-edge meme coin led by Captain Whiskers, our iconic neon-lit feline astronaut. Stay tuned for our launch on pump.fun and join the cosmic crypto revolution.</p>
+        <a href="#token-stats" class="cta-button">Learn More About $MEOW</a>
+        <button class="meow-button" onclick="playMeow()">Meow</button>
     </section>
 
-    <section id="features" class="features">
-        <h2>Why MoonMeow?</h2>
+    <section id="features" class="section features">
+        <h2>Why Choose MoonMeow?</h2>
         <div class="feature-grid">
-            <div class="feature-card">Scalable Blockchain Technology</div>
-            <div class="feature-card">Vibrant Community Engagement</div>
-            <div class="feature-card">Unique Token Burn Mechanism</div>
+            <div class="feature-card">Scalable Blockchain Infrastructure</div>
+            <div class="feature-card">Engaged Global Community</div>
+            <div class="feature-card">Innovative Tokenomics</div>
         </div>
     </section>
 
-    <section id="token-stats" class="token-stats">
+    <section id="token-stats" class="section">
         <h2>Tokenomics</h2>
-        <p>Total Supply: 1,000,000,000 $MEOW | Circulating Supply: 500,000,000 $MEOW | Transaction Tax: 2% (1% Redistribution, 1% Burn)</p>
+        <p>Total Supply: 1,000,000,000 $MEOW | Circulating Supply: 500,000,000 $MEOW | Transaction Fee: 2% (1% Redistribution to Holders, 1% Burn)</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="roadmap" class="roadmap">
+    <section id="roadmap" class="section">
         <h2>Roadmap</h2>
         <p>
-            <strong>Q1 2025:</strong> Official launch on pump.fun, initial marketing campaign.<br>
-            <strong>Q2 2025:</strong> Introduction of NFT airdrops for top holders.<br>
+            <strong>Q1 2025:</strong> Launch on pump.fun, initial marketing campaign.<br>
+            <strong>Q2 2025:</strong> NFT airdrops for early adopters.<br>
             <strong>Q3 2025:</strong> Expansion of the Lunar Litter Box treasure hunt.<br>
-            <strong>Q4 2025:</strong> Partnerships with DeFi platforms.
+            <strong>Q4 2025:</strong> Strategic partnerships with DeFi platforms.
         </p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="community" class="community">
+    <section id="community" class="section">
         <h2>Community</h2>
-        <p>Join our X, Discord, and Telegram for updates. Follow @MoonMeow for the latest!</p>
+        <p>Connect with us on X, Discord, and Telegram. Follow @MoonMeowOfficial for updates.</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="news" class="news">
+    <section id="news" class="section">
         <h2>Latest News</h2>
-        <p>Stay tuned for our official launch announcement!</p>
+        <p>Stay tuned for our official launch announcement in early 2025.</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="wallet" class="wallet">
-        <h2>Connect Your Wallet</h2>
-        <p>To buy $MEOW, visit <a href="https://pump.fun" target="_blank">pump.fun</a> after launch.</p>
+    <section id="wallet" class="section">
+        <h2>Wallet Integration</h2>
+        <p>Prepare to connect your wallet on pump.fun after our launch to buy $MEOW.</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="faq" class="faq">
+    <section id="faq" class="section">
         <h2>FAQ</h2>
-        <p><strong>Q: What is $MEOW?</strong> A: A meme coin with a cosmic cat theme!<br><strong>Q: How to buy?</strong> A: Visit pump.fun post-launch!</p>
+        <p><strong>What is $MEOW?</strong> MoonMeow is a meme coin with a unique cosmic cat theme.<br><strong>How can I buy $MEOW?</strong> Available on pump.fun post-launch.</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="section">
         <h2>Contact Us</h2>
         <p>Email: contact@moonmeow.crypto | X: @MoonMeowOfficial</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="treasure" class="treasure">
+    <section id="treasure" class="section">
         <h2>Lunar Litter Box Treasure Hunt</h2>
-        <p>Find QR codes post-launch for bonus $MEOW and NFTs. Check X for clues!</p>
+        <p>Participate in our post-launch QR code hunt for exclusive $MEOW rewards and NFTs. Details on X.</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="social" class="social">
+    <section id="social" class="section">
         <h2>Social Media</h2>
-        <p>Follow us on X: @MoonMeowOfficial</p>
+        <p>Follow us on X: @MoonMeowOfficial for the latest updates and memes.</p>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
-    <section id="fun" class="fun-zone">
+    <section id="fun" class="section">
         <h2>Fun Zone</h2>
-        <p>Enjoy a sneak peek of cosmic cat chaos!</p>
-        <button class="meow-button" onclick="playMeow()">Meow Loudly!</button>
-        <button class="meow-button" onclick="catDance()">Watch Captain Whiskers Dance!</button>
+        <p>Experience a lighthearted side of MoonMeow with our cosmic cat charm.</p>
+        <button class="meow-button" onclick="playMeow()">Meow</button>
         <a href="#home" class="cta-button">Back to Home</a>
     </section>
 
@@ -236,12 +262,7 @@
         function playMeow() {
             const meowSound = new Audio('https://www.myinstants.com/media/sounds/meow-1.mp3');
             meowSound.play().catch(error => console.log('Meow failed to play:', error));
-            alert('Captain Whiskers says: MEOW!');
-        }
-
-        function catDance() {
-            alert('Captain Whiskers is doing the moonwalk!');
         }
     </script>
 </body>
-                                   </html>
+</html>
